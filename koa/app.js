@@ -7,7 +7,7 @@ var app=new koa();
 app.use(async (ctx,next)=>{
     console.log(`${ctx.request.method} ${ctx.request.url}`);
     await next();//调用下一个middleware
-})
+});
 
 app.use(async (ctx,next)=>{
     const start=new Date().getTime();//当前时间
@@ -20,8 +20,8 @@ app.use(async (ctx,next)=>{
 app.use(async (ctx,next) => {
     await next();
     ctx.response.type="text/html";
-    ctx.response.body='<h1>hellow,koa2!</h1>'
-})
+    ctx.response.body='<h1>hellow,koa2!</h1>';
+});
 
 //在端口监听3000
 app.listen(3000);

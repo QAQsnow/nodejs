@@ -21,6 +21,8 @@ if(!isProduction){
     app.use(staticFiles('/static/',__dirname+"/static"))
 }
 
+
+
 //add router middleware
 app.use(bodyparser());
 
